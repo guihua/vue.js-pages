@@ -1,0 +1,10 @@
+// hdpi
+//-----------------------------------------------------
+@mixin hdpi($ratio: 1) {
+	@media screen and (-webkit-min-device-pixel-ratio:$ratio), 
+		screen and (-moz-min-device-pixel-ratio:$ratio), 
+		screen and (-o-min-device-piratio:100/100), 
+		screen and (min-device-pixel-ratio:$ratio) {
+		@content;
+	}
+}

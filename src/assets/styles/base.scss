@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/******************************************************
+ * base scss
+ * 提供所有的基础功能，包括：变量设置，@media，基础mixin，reset样式
+ * 默认会输出reset样式一份
+ * -------------------------------------
+ * @author: guihua.pgh
+ * @email: guihua.pgh@alibaba-inc.com
+ ******************************************************/
+
+// variable
+@import "./variable/font";
+@import "./variable/color";
+@import "./variable/gap";
+@import "./variable/border";
+@import "./variable/zindex";
+@import "./variable/switch";
+
+// media-qurey
+@import "./media-qurey/screen";
+@import "./media-qurey/hdpi";
+
+// mixin
+@import "./mixin/text";
+@import "./mixin/input";
+@import "./mixin/mask";
+@import "./mixin/set-line";
+@import "./mixin/set-border";
+@import "./mixin/clearfix";
+@import "./mixin/disabled";
+
+// reset
+@import "./reset/reset";

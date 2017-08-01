@@ -1,0 +1,25 @@
+// mask遮罩层
+// 包括普通遮罩层和透明遮罩层
+//-----------------------------------------------------
+%mask {
+    position: fixed;
+    z-index: $modalZIndex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    // height: 100%;
+}
+@mixin commonMask() {
+    background-color: $opacityColorD5;
+    @extend %mask;
+}
+@mixin transparentMask() {
+    background-color: transparent;
+    @extend %mask;
+}
+@mixin transitionMask() {
+    transition: background .3s;
+    background: rgba(0, 0, 0, 0);
+    @extend %mask;
+}

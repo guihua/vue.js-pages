@@ -1,0 +1,11 @@
+// disabled
+// 禁用样式，加 !important
+//-----------------------------------------------------
+@mixin disabled($bgColor: #e6e6e6, $textColor: #999) {
+	cursor: not-allowed !important;
+	color: $textColor !important;
+	background-color: $bgColor !important;
+}
+%disabled {
+	@include disabled();
+}
