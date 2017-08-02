@@ -1,11 +1,13 @@
 var path = require('path')
 var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var glob = require('glob')
 
 exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
     : config.dev.assetsSubDirectory
+
   return path.posix.join(assetsSubDirectory, _path)
 }
 
@@ -21,8 +23,9 @@ exports.cssLoaders = function (options) {
   }
 
   // generate loader string to be used with extract text plugin
-  function generateLoaders (loader, loaderOptions) {
+  function generateLoaders(loader, loaderOptions) {
     var loaders = [cssLoader]
+
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
@@ -60,12 +63,29 @@ exports.cssLoaders = function (options) {
 exports.styleLoaders = function (options) {
   var output = []
   var loaders = exports.cssLoaders(options)
+
   for (var extension in loaders) {
     var loader = loaders[extension]
+
     output.push({
       test: new RegExp('\\.' + extension + '$'),
       use: loader
     })
   }
+
   return output
+}
+
+// get entries
+exports.getEntries = function (globPath) {
+  var entries = {}
+
+  glob.sync(globPath).forEach(function (entry) {
+    var tmp = entry.split('/').splice(-3)
+    var moduleName = tmp.slice(1, 2);
+
+    entries[moduleName] = entry
+  })
+
+  return entries;
 }

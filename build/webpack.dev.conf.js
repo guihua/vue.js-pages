@@ -24,12 +24,21 @@ module.exports = merge(baseWebpackConfig, {
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    // https://github.com/ampedandwired/html-webpack-plugin
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
-      inject: true
-    }),
     new FriendlyErrorsPlugin()
   ]
 })
+
+var pages = utils.getEntries('./src/views/**/*.html')
+
+for (var page in pages) {
+  var conf = {
+    filename: page + '.html',
+    template: pages[page],
+    inject: true,
+    excludeChunks: Object.keys(pages).filter(item => {
+      return (item != page)
+    })
+  }
+
+  module.exports.plugins.push(new HtmlWebpackPlugin(conf))
+}

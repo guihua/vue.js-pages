@@ -3,14 +3,12 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
 module.exports = {
-  entry: {
-    app: './src/main.js'
-  },
+  entry: utils.getEntries('./src/views/**/*.js'),
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -22,7 +20,9 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve('src'),
+      'assets': path.resolve(__dirname, '@/src/assets'),
+      'components': path.resolve(__dirname, '@/src/components')
     }
   },
   module: {
@@ -69,6 +69,10 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.(scss|sass)?$/,
+        loader: ['vue-style-loader','css', 'sass'].join('!')
       }
     ]
   }
