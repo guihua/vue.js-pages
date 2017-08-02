@@ -1,0 +1,71 @@
+@import '../../../assets/styles/fn';
+
+// header
+// -----------------------------------------
+.header {
+    position: relative;
+    z-index: 1000;
+    height: 100px;
+    overflow: hidden;
+    background-color: rgba(32,65,100,.95);
+    @include clearfix();
+
+    .logo {
+        display: inline-block;
+        padding-top: 25px;
+
+        img {
+            display: block;
+        }
+    }
+    nav {
+        float: right;
+    }
+}
+nav {
+    @include clearfix();
+
+    li {
+        float: left;
+        box-sizing: border-box;
+        width: 256px;
+        line-height: 98px;
+        border-top: 2px solid transparent;
+        text-align: center;
+
+        &.current {
+            border-color: #ec027d;
+        }
+        a {
+            position: relative;
+            display: block;
+            margin-top: 39px;
+            line-height: 21px;
+            border-left: 1px solid #34608e;
+            border-right: 1px solid #001e3d;
+            text-decoration: none;
+            color: #fff;
+        }
+        &:first-child, &:last-child {
+            a:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 1px;
+                height: 21px;
+            }
+        }
+        &:first-child {
+            a:before {
+                left: -2px;
+                background-color: #001e3d;
+            }
+        }
+        &:last-child {
+            a:before {
+                right: -2px;
+                background-color: #34608e;
+            }
+        }
+    }
+}
