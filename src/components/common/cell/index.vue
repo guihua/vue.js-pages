@@ -1,5 +1,5 @@
 <template>
-  <div class="cmui-cell" :class="{ 'cmui-cell-access': access }">
+  <div class="cmui-cell" :class="{ 'cmui-cell-access': access }" @click="accessTo">
     <div class="cmui-cell-hd">
       <slot name="hd"></slot>
     </div>
@@ -23,6 +23,14 @@
 
     props: {
       access: Boolean
+    },
+
+    methods: {
+      accessTo (e) {
+        if (this.access) {
+          console.log(e.target)
+        }
+      }
     }
   }
 </script>
