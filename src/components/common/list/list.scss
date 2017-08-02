@@ -1,0 +1,26 @@
+@import '../../../assets/styles/fn';
+
+// list
+//-----------------------------------------------------
+.cmui-list {
+  position: relative;
+
+  &:before {
+    @include setTopLine()
+  }
+  &:after {
+    @include setBottomLine()
+  }
+  &-item {
+    position: relative;
+    margin-left: 12px;
+    padding: 10px 12px 10px 0;
+
+    &:before {
+      @include setTopLine()
+    }
+    &:first-child:before {
+      border-top: 0;
+    }
+  }
+}

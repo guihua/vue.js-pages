@@ -1,0 +1,24 @@
+@import '../../../assets/styles/fn';
+
+// cells
+//-----------------------------------------------------
+.cmui-cells {
+  position: relative;
+  margin: 20px 0;
+  background-color: #fff;
+
+  &:before {
+    @include setTopLine()
+  }
+  &:after {
+    @include setBottomLine()
+  }
+  &-title {
+    position: relative;
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+  .cmui-cell {
+    margin-left: 12px;
+  }
+}
