@@ -4,7 +4,7 @@ import Detail from './detail.vue'
 /* eslint-disable no-new */
 new Vue({
   el: '#detail',
-  template: '<Detail/>',
+  template: '<Detail></Detail>',
   components: {
     Detail
   }

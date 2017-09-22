@@ -1,30 +1,35 @@
-# vue.js-pages
+vue.js-pages
+===
 
-> A Vue.js project
+vue.js 多页面开发模板。
 
-## Build Setup
+开始之前，请执行 node 运行环境的安装。
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+1. 新建项目
+```bash
+# 在 views 下新建项目目录
+home
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+项目目录结构如下：
+```bash
+| - home
+  | - index.html
+  | - index.js
+  | - company.vue
+```
+
+
+2. 项目运行
+```bash
+npm run dev
+```
+
+访问路径为：http://localhost:8080/home.html
+
+3. 项目打包
+```bash
+npm run build
+```
+
+打包的资源文件在 dist 目录下。

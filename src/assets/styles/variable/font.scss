@@ -1,11 +1,9 @@
 // font相关
 //-----------------------------------------------------
 // 基础字体
-$cmuiFontEN: 		-apple-system-font,"Helvetica Neue";
-$cmuiFontCN: 		"PingFang SC","Hiragino Sans GB","Microsoft YaHei";
-$cmuiFontSans: 		sans-serif;
-
-$cmuiFontDefault: 	$cmuiFontEN, $cmuiFontCN, $cmuiFontSans !default;
+$cmuiFontDefault: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+             "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+             SimSun, sans-serif;
 
 
 // 根字体size

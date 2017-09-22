@@ -1,0 +1,43 @@
+.list-seq {
+  padding: 0 10px;
+
+  &-item {
+    display: flex;
+    margin-bottom: 10px;
+    background-color: rgba(255,255,255,.2);
+    color: #fff;
+
+    .list-item-seq {
+      width: 80px;
+      text-align: center;
+      font-size: 12px;
+
+      span {
+        display: block;
+        margin-top: 22px;
+        line-height: 24px;
+      }
+      &.seq-1 {
+        background: url('../../assets/img/rank/icon-medal-1.png') no-repeat center 15px;
+        background-size: 25px 30px;
+      }
+      &.seq-2 {
+        background: url('../../assets/img/rank/icon-medal-2.png') no-repeat center 15px;
+        background-size: 25px 30px;
+      }
+      &.seq-3 {
+        background: url('../../assets/img/rank/icon-medal-3.png') no-repeat center 15px;
+        background-size: 25px 30px;
+      }
+    }
+    .list-item-content {
+      flex: 1;
+      padding: 10px 0;
+      font-size: 12px;
+
+      h3 {
+        font-size: 15px;
+      }
+    }
+  }
+}

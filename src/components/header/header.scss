@@ -1,0 +1,37 @@
+@import '../../assets/styles/fn.scss';
+
+header {
+  padding: 4px 24px;
+  background-color: #fff;
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: #5bc478;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+
+    .search-input {
+      flex: 1;
+      padding-left: 5px;
+      line-height: 30px;
+      background-color: #5bc478;
+      border: 0;
+      border-radius: 5px;
+      color: #fff;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+    .search-btn {
+      padding: 0 10px;
+      color: #fff;
+    }
+  }
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}

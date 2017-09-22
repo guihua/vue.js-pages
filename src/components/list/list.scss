@@ -1,0 +1,30 @@
+@import '../../assets/styles/fn.scss';
+
+.page-content {
+  position: absolute;
+  left: 0;
+  top: 38px;
+  right: 0;
+  bottom: 0;
+  background: #28283e url('../../assets/img/rank/bg01.png') no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.list {
+  padding: 0 10px;
+  color: #fff;
+  font-size: 12px;
+
+  h2 {
+    padding: 20px 0;
+    text-align: center;
+    color: #eac04d;
+    font-size: 24px;
+    text-shadow: 0 0 1px 1px #fff;
+  }
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
