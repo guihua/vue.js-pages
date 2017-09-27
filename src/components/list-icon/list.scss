@@ -1,0 +1,52 @@
+.list {
+  display: flex;
+  padding: 15px 0;
+  background-color: #5ac3b4;
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0 25px;
+    height: 45px;
+    border-left: 1px solid #2f9b8c;
+    border-right: 1px solid #7bddcf;
+
+    &:first-child {
+      border-left: 0;
+    }
+    &:last-child {
+      border-right: 0;
+    }
+    .list-item-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+
+      &.count {
+        background: #fff url('../../assets/img/risk/icon-count.png') no-repeat center;
+        background-size: 20px 15px;
+      }
+      &.star {
+        background: #fff url('../../assets/img/risk/icon-star.png') no-repeat center;
+        background-size: 17px;
+      }
+      &.heart {
+        background: #fff url('../../assets/img/risk/icon-heart.png') no-repeat center;
+        background-size: 16px 13px;
+      }
+    }
+    .list-item-text {
+      text-align: right;
+      font-size: 12px;
+      color: #fff;
+
+      em {
+        display: block;
+        font-style: normal;
+        font-size: 15px;
+      }
+    }
+  }
+}

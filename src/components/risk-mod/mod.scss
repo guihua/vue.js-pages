@@ -1,0 +1,27 @@
+@import '../../assets/styles/fn.scss';
+
+.mod {
+  position: relative;
+
+  &-hd {
+    position: relative;
+    padding: 15px 20px 8px;
+    background-color: #f8f8f8;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 20px;
+      width: 4px;
+      height: 9px;
+      background-color: #5ac3b4;
+    }
+    .mod-title {
+      margin: 0;
+      font-size: 14px;
+      color: #1e1e1e;
+    }
+  }
+  &-bd {}
+}

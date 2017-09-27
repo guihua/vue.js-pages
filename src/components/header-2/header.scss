@@ -1,0 +1,15 @@
+@import '../../assets/styles/fn.scss';
+
+header {
+  position: relative;
+  height: 44px;
+  line-height: 44px;
+  background-color: #373b3e;
+  text-align: center;
+  color: #fff;
+
+  h1 {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
