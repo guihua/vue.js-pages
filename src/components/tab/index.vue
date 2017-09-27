@@ -1,6 +1,9 @@
 <template>
   <ul class="tab">
-    <li class="tab-item" v-for="(tab, i) in tabs" :key="i">{{tab}}</li>
+    <li class="tab-item"
+      v-for="(tab, i) in tabs"
+      :key="i"
+      :class="{ 'active': tab.active }">{{tab.item}}</li>
   </ul>
 </template>
 
