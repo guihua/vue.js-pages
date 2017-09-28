@@ -3,7 +3,8 @@
     <li class="tab-item"
       v-for="(tab, i) in tabs"
       :key="i"
-      :class="{ 'active': tab.active }">{{tab.item}}</li>
+      :class="{ 'active': activeTabIndex === i }"
+      @click="select(i)">{{tab}}</li>
   </ul>
 </template>
 
@@ -13,6 +14,18 @@
 
     props: {
       tabs: Array
+    },
+
+    data () {
+      return {
+        activeTabIndex: 0
+      }
+    },
+
+    methods: {
+      select (index) {
+        this.activeTabIndex = index
+      }
     }
   }
 </script>

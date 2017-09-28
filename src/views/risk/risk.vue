@@ -27,14 +27,7 @@
     value: 333
   }]
 
-  const tabs = [{
-    item: '风险信息',
-    active: true
-  }, {
-    item: '商业机会'
-  }, {
-    item: '新闻舆情'
-  }]
+  const tabs = ['风险信息', '商业机会', '新闻舆情']
 
   export default {
     name: 'risk',
