@@ -8,6 +8,8 @@
     </risk-mod>
     <risk-mod title="客户动态">
       <risk-tab :tabs="tabs"></risk-tab>
+      <risk-module :module="module"></risk-module>
+      <risk-module :module="module"></risk-module>
     </risk-mod>
   </div>
 </template>
@@ -29,6 +31,33 @@
 
   const tabs = ['风险信息', '商业机会', '新闻舆情']
 
+  const modulesData = {
+    mtitle: '09-06',
+    article: [{
+      hd: '大连万达股份有限公司',
+      list: [{
+        title: '标题111111111',
+        status: '行政处罚',
+        content: '一场秋雨一场寒一场秋雨一场寒一场秋雨一场寒一场秋雨一场寒'
+      }, {
+        title: '标题111111111',
+        status: '行政处罚',
+        content: '一场秋雨一场寒一场秋雨一场寒一场秋雨一场寒一场秋雨一场寒'
+      }]
+    }, {
+      hd: '大连万达股份有限公司',
+      list: [{
+        title: '标题111111111',
+        status: '行政处罚',
+        content: '一场秋雨一场寒一场秋雨一场寒一场秋雨一场寒一场秋雨一场寒'
+      }, {
+        title: '标题111111111',
+        status: '行政处罚',
+        content: '一场秋雨一场寒一场秋雨一场寒一场秋雨一场寒一场秋雨一场寒'
+      }]
+    }]
+  }
+
   export default {
     name: 'risk',
 
@@ -36,13 +65,15 @@
       RiskHeader: require('../../components/header-2'),
       RiskMod: require('../../components/risk-mod'),
       RiskList: require('../../components/list-icon'),
-      RiskTab: require('../../components/tab')
+      RiskTab: require('../../components/tab'),
+      RiskModule: require('../../components/risk-module')
     },
 
     data () {
       return {
         list: listData,
-        tabs: tabs
+        tabs: tabs,
+        module: modulesData
       }
     }
   }
@@ -59,6 +90,6 @@
     bottom: 0;
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
-    background-color: #fff;
+    background-color: #f8f8f8;
   }
 </style>
