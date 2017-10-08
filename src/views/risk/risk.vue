@@ -3,14 +3,14 @@
     <risk-header>
       <h1>客户管理</h1>
     </risk-header>
-    <risk-mod title="我的客户">
+    <risk-article title="我的客户">
       <risk-list :list="list"></risk-list>
-    </risk-mod>
-    <risk-mod title="客户动态">
+    </risk-article>
+    <risk-article title="客户动态">
       <risk-tab :tabs="tabs"></risk-tab>
       <risk-module :module="module"></risk-module>
       <risk-module :module="module"></risk-module>
-    </risk-mod>
+    </risk-article>
   </div>
 </template>
 
@@ -62,8 +62,8 @@
     name: 'risk',
 
     components: {
-      RiskHeader: require('../../components/header-2'),
-      RiskMod: require('../../components/risk-mod'),
+      RiskHeader: require('../../components/header-simple'),
+      RiskArticle: require('../../components/risk-article'),
       RiskList: require('../../components/list-icon'),
       RiskTab: require('../../components/tab'),
       RiskModule: require('../../components/risk-module')
@@ -91,5 +91,8 @@
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
     background-color: #f8f8f8;
+  }
+  .tab {
+    padding: 0 20px;
   }
 </style>
