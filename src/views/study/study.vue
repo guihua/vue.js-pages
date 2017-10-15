@@ -23,6 +23,17 @@
       </div>
     </div>
     <list-img :data="lists"></list-img>
+    <div class="banner">
+      <div class="banner-bd">
+        <img src="../../assets/img/study/banner03.png" alt="">
+        <img src="../../assets/img/study/banner03.png" alt="">
+        <img src="../../assets/img/study/banner03.png" alt="">
+      </div>
+    </div>
+    <list-img :data="lists"></list-img>
+    <div class="loading">
+      <span>正在加载中...</span>
+    </div>
   </div>
 </template>
 
