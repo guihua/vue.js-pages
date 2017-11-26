@@ -1,0 +1,154 @@
+@import '../../assets/styles/base';
+
+.page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  padding-bottom: 45px;
+  background-color: #f8f8f8;
+}
+.btn-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  background: url('../../assets/img/project/icon-back.png') no-repeat center;
+  background-size: 15px 14px;
+}
+.btn-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  background: url('../../assets/img/project/icon-menu.png') no-repeat center;
+  background-size: 20px 4px;
+}
+.tips {
+  position: absolute;
+  left: 12px;
+  top: 5px;
+  width: 20px;
+  height: 14px;
+  line-height: 14px;
+  background: url('../../assets/img/project/icon-tips.png') no-repeat;
+  background-size: 20px 14px;
+  font-size: 12px;
+  text-align: center;
+
+  span {
+    display: block;
+    color: #fff;
+    transform: scale(0.8);
+  }
+}
+.detail-article {
+  margin-top: 10px;
+  padding: 0 15px;
+  background-color: #fff;
+
+  .article-hd {
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+
+    &:after {
+      @include setBottomLine(#5ac3b4);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 15px;
+      width: 4px;
+      height: 15px;
+      background-color: #5ac3b4;
+    }
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      color: #5ac3b4;
+      font-weight: normal;
+    }
+  }
+  .article-bd {}
+}
+.detail-info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+
+  span {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #1e1e1e;
+
+    &:nth-child(1) {
+      margin: 0;
+      width: 100%;
+    }
+    &:nth-child(2n+2) {
+      width: 60%;
+    }
+    &:nth-child(2n+3) {
+      width: 40%;
+    }
+  }
+}
+.list {
+  width: 100%;
+  color: #333;
+  font-size: 14px;
+
+  li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 45px;
+    background: url('../../assets/img/project/icon-arrow.png') no-repeat right center;
+    background-size: 7px 13px;
+
+    &:after {
+      @include setBottomLine(#e7e6ee);
+    }
+    &:last-child:after {
+      border-bottom: 0;
+    }
+    .icon {
+      display: inline-block;
+      margin-right: 15px;
+      width: 15px;
+      height: 19px;
+
+      &-file1 {
+        background: url('../../assets/img/project/icon-file1.png') no-repeat;
+        background-size: 15px 19px;
+      }
+      &-file2 {
+        background: url('../../assets/img/project/icon-file2.png') no-repeat;
+        background-size: 15px 19px;
+      }
+    }
+  }
+}
+.fixed-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  .btn-detail {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    background-color: #5ac3b4;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+  }
+}

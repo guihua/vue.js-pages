@@ -1,0 +1,63 @@
+.list {
+  background-color: #f4f5f9;
+
+  &-item {
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #1e1e1e;
+
+    &-hd {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+
+      h4 {
+        flex-wrap: wrap;
+        margin: 0;
+        width: 80%;
+        font-size: 14px;
+        font-weight: normal;
+      }
+      .count {
+        width: 60px;
+        height: 15px;
+        line-height: 15px;
+        overflow: hidden;
+        background-color: #fb3b30;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+    &-bd {
+      display: flex;
+      flex-wrap: wrap;
+      background: url('../../assets/img/project/icon-arrow.png') no-repeat right 3px;
+      background-size: 7px 13px;
+      font-size: 14px;
+      cursor: pointer;
+
+      span {
+        &:nth-child(1), &:nth-child(2) {
+          margin-bottom: 10px;
+        }
+        &:nth-child(2n) {
+          width: 40%;
+        }
+        &:nth-child(2n+1) {
+          width: 60%;
+        }
+      }
+      .status {
+        color: #5ac3b4;
+
+        &.process {
+          color: #1e1e1e;
+        }
+      }
+    }
+  }
+}
